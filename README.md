@@ -1,7 +1,9 @@
 ember-kohactivated
 ==============================================================================
 
-[Short description of the addon.]
+**[At Kohactive we develop a lot of Ember.js applications.](https://kohactive.com)** We found ourselves using the same addons and config files across repos, so we extracted all of that into an addon in order to jump-start new projects.
+
+The generator for this addon does most of the heavy lifting. This is by design, to be transparent about the npm packages and files added.
 
 Installation
 ------------------------------------------------------------------------------
@@ -10,11 +12,35 @@ Installation
 ember install ember-kohactivated
 ```
 
+or
+
+```
+npm install --save-dev ember-kohactivated
+ember g ember-kohactivated
+```
+
 
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+### Addons Included:
+
+- `active-model-adapter` - We build our APIs in Ruby on Rails with Active Model Serializers
+- `ember-cli-dotenv` - For managing environment variables
+- `ember-cli-flash` - Flash messages
+- `ember-cli-mirage` - Factories, fixtures, and stubs for API routes
+- `ember-cli-sass` - Use scss pre-processor
+- `ember-data-has-many-query` - Add query params to an async `hasMany` API call
+- `ember-get-config` - Easier access to app config vars
+- `ember-lodash` - Lodash. For Ember.
+- `ember-moment` - Time and data display, parsing, and mathing
+- `ember-simple-auth` - Authentication with API
+- `ember-truth-helpers` - Simple logic in templates
+
+### Optional:
+
+- `ember-bootstrap` - Bootstrap CSS framework
+- `ember-cli-cloudinary` - Cloudinary image manipulation and uploader
 
 
 Contributing
