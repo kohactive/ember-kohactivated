@@ -18,6 +18,10 @@ const bootstrapPackage = {
   name: 'ember-bootstrap', target: '^2.1.2'
 };
 
+const tailwindPackage = {
+  name: 'ember-cli-tailwind', target: '^0.7.0'
+};
+
 const cloudinaryPackage = {
   name: 'ember-cli-cloudinary', target: '0.2.0'
 };
@@ -58,6 +62,12 @@ module.exports = {
       message: 'Do you want to install ember-bootstrap? (y/n)'
     });
 
+    const tailwindPrompt = await this.ui.prompt({
+      type: 'input',
+      name: 'tailwind',
+      message: 'Do you want to install ember-cli-tailwind? (y/n)'
+    })
+
     const cloudinaryPrompt = await this.ui.prompt({
       type: 'input',
       name: 'cloudinary',
@@ -65,6 +75,7 @@ module.exports = {
     });
 
     options.entity.bootstrap = promptToBool(bootstrapPrompt, 'bootstrap');
+    options.entity.tailwind = promptToBool(tailwindPrompt, 'tailwind');
     options.entity.cloudinary = promptToBool(cloudinaryPrompt, 'cloudinary');
     options.cloudinaryENV = getCloudinaryENV(options.entity.cloudinary);
     options.allowedKeys = getAllowedKeys(options.entity.cloudinary);
@@ -77,6 +88,10 @@ module.exports = {
 
     if (options.entity.bootstrap) {
       packages.push(bootstrapPackage);
+    }
+
+    if (options.entity.tailwind) {
+      packages.push(tailwindPackage);
     }
 
     if (options.entity.cloudinary) {
