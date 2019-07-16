@@ -11,7 +11,8 @@ const basePackages = [
   { name: 'ember-lodash', target: '^4.18.0' },
   { name: 'ember-moment', target: '^7.8.0' },
   { name: 'ember-simple-auth', target: '^1.7.0' },
-  { name: 'ember-truth-helpers', target: '^2.1.0' }
+  { name: 'ember-truth-helpers', target: '^2.1.0' },
+  { name: 'ember-concurrency', target: '^1.0.0' }
 ];
 
 const bootstrapPackage = {
