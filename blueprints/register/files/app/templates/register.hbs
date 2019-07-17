@@ -1,0 +1,53 @@
+<form {{action "signUp" model on="submit"}}>
+
+  <label>
+    E-mail Address
+    {{input 
+      data-test-signup-email 
+      type="text" 
+      value=model.email
+    }}
+  </label>
+
+  <label class="step-card-input-label font-bold">
+    Password
+    {{input
+      data-test-signup-password
+      type="password" 
+      value=model.password
+    }}
+  </label>
+
+  <label>
+    Confirm Password
+    {{input
+      data-test-signup-confpass 
+      type="password" 
+      value=model.passwordConfirmation
+    }}
+  </label>
+
+  <label>
+    {{input 
+      data-test-signup-terms 
+      type="checkbox" 
+      checked=model.termsAccepted
+    }}
+    I agree to the Terms and Privacy Policy
+  </label>
+
+  {{input 
+    data-test-signup-submit
+    type="submit"
+    value="Sign Up"
+  }}
+  
+  <p>
+    Already have an account?
+    {{link-to 
+      "Login"
+      "login"
+    }}
+  </p>
+
+</form>
