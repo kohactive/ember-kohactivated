@@ -67,7 +67,7 @@ module.exports = {
       type: 'input',
       name: 'tailwind',
       message: 'Do you want to install ember-cli-tailwind? (y/n)'
-    })
+    });
 
     const cloudinaryPrompt = await this.ui.prompt({
       type: 'input',
