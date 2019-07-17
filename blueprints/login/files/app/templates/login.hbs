@@ -1,11 +1,29 @@
+<h1>Login</h1>
+
 <form {{action "authenticate" model on="submit"}}>
   <label>
     Username
-    {{input data-test-login-email type="text" value=model.email}}
+    {{input
+      data-test-login-email
+      type="text"
+      value=model.email
+    }}
   </label>
   <label>
     Password
-    {{input data-test-login-password type="password" value=model.password}}
+    {{input
+      data-test-login-password 
+      type="password" 
+      value=model.password
+    }}
   </label>
-  {{input data-test-login-submit type="submit" value="Login"}}
+  {{input 
+    data-test-login-submit
+    type="submit"
+    value="Login"
+  }}
+  {{link-to 
+    "Forgot your password?"
+    "password.request"
+  }}
 </form>
