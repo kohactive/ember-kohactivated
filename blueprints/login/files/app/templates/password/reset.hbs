@@ -1,0 +1,33 @@
+<h1>Change your password</h1>
+<form {{action "resetPassword" model on="submit"}}>
+  <label>
+    E-mail Address
+    {{input
+      data-test-reset-email
+      type="text"
+      value=model.email
+    }}
+  </label>
+  <label>
+    New Password
+    {{input 
+      data-test-reset-password
+      type="password"
+      value=model.password
+    }}
+  </label>
+  <label>
+    Confirm Password
+    {{input 
+      data-test-reset-password
+      type="password"
+      value=model.password_confirmation
+    }}
+  </label>
+
+  {{input 
+    data-test-request-submit
+    type="submit"
+    value="Reset Password"
+  }}
+</form>
